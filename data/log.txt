@@ -1,0 +1,1 @@
+Adding user - add_user executed with args: (<__main__.UserManager object at 0x000002A18EA2A290>, {'id': '2', 'name': 'John', 'email': 'afs@gmail.com', 'birth_date': '1990-01-01', 'password': '1234'}), and kwargs: {}

@@ -1,0 +1,33 @@
+[
+    {
+        "id": "1",
+        "name": "John",
+        "email": "afs@gmail.com",
+        "birth_date": "1990-01-01"
+    },
+    {
+        "id": "1",
+        "name": "John",
+        "email": "afs@gmail.com",
+        "birth_date": "1990-01-01"
+    },
+    {
+        "id": "1",
+        "name": "John",
+        "email": "afs@gmail.com",
+        "birth_date": "1990-01-01"
+    },
+    {
+        "id": "2",
+        "name": "John",
+        "email": "afs@gmail.com",
+        "birth_date": "1990-01-01"
+    },
+    {
+        "id": "2",
+        "name": "John",
+        "email": "afs@gmail.com",
+        "birth_date": "1990-01-01",
+        "password": "1234"
+    }
+]
