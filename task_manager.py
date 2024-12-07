@@ -41,6 +41,7 @@ class Task():
         self.users.remove(user_id)
         save_update(self)
         print(f"User {user_id} removed from the task.")
+
     @log("collecting users in task")
     def show_users(self):
         return self.users
@@ -61,20 +62,20 @@ class TaskManager():
             return True
         else:
             print("Task data is invalid. Task was not added.")
-    
+    @log("showing tasks")
     def show_tasks(self):
         tasks = load_data()
         for task in tasks:
             output = "\n".join(f"{key}: {value}" for key, value in task.items())
             print(output)
         return output
-    
+    @log("Finding data from the tasks")
     def find_data(self, field, data_to_find, tasks):
         for task in tasks:
             if task.get(field) == data_to_find:
                 return True
         return False
-    
+    @log("Updating task field")
     def update_task_field(self, field, data, new_data):
         tasks = load_data("tasks.json")
         try:
