@@ -17,3 +17,12 @@ def validate_task(task):
             return False
     # Si todas las validaciones pasan, retornamos True
     return True
+
+def validate_project(project):
+    fieds = ["id", "name", "description", "priority", "tasks", "users"]
+    for field in fieds:
+        if not project.get(field):
+            print(f"{field} must be present and cannot be empty.")
+            return False
+    # Si todas las validaciones pasan, retornamos True
+    return True

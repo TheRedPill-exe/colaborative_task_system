@@ -13,9 +13,9 @@ class Task():
         self.end_date = end_date
         self.priority = priority
         self.users = users
-        self.projects = ProjectParent.projects
+        self.project = ProjectParent.project_id
 
-    @log("Collecting task")
+    @log("Collecting task data")
     def show_task(self):
         output = "\n".join(f"{key}: {value}" for key, value in self.__dict__.items())
         print(output)
@@ -30,6 +30,7 @@ class Task():
                 save_update(self)
         except:
             print("Unexpected error")
+
     @log("Adding user to task")
     def add_user(self, user_id):
         self.users.append(user_id)
@@ -63,18 +64,21 @@ class TaskManager():
         else:
             print("Task data is invalid. Task was not added.")
     @log("showing tasks")
+
     def show_tasks(self):
         tasks = load_data()
         for task in tasks:
             output = "\n".join(f"{key}: {value}" for key, value in task.items())
             print(output)
         return output
+
     @log("Finding data from the tasks")
     def find_data(self, field, data_to_find, tasks):
         for task in tasks:
             if task.get(field) == data_to_find:
                 return True
         return False
+
     @log("Updating task field")
     def update_task_field(self, field, data, new_data):
         tasks = load_data("tasks.json")
@@ -92,16 +96,12 @@ class TaskManager():
                 print(f"{field} {data} not found.")
         except:
             print("Unexpected error")
-    
+            
+    @log("Geting user tasks")
     def get_user_tasks(self, user_id):
         tasks = load_data("tasks.json")
         user_tasks = [task for task in tasks if user_id in task["users"]]
         return user_tasks
-    
-    def get_project_tasks(self, project_id):
-        tasks = load_data("tasks.json")
-        project_tasks = [task for task in tasks if project_id in task["projects"]]
-        return project_tasks
 
 task = Task(1, "Task 1", "Description", "To Do", "2021-01-01", "2021-01-10", "High")
 print(task.__str__())
