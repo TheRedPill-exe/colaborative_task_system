@@ -10,8 +10,8 @@ class CollaborativeTaskSystem():
         self.projects = ProjectManager()
     
     @log("Creating user")
-    def create_user(self, id, name, email, password):
-        new_user = User(id, name, email, password)
+    def create_user(self, id, name, email, password, birth_date, tasks, projects):
+        new_user = User(id, name, email, password , birth_date, tasks, projects)
         return self.users.add_user(new_user)
     
     @log("Creating task")
@@ -63,3 +63,7 @@ class CollaborativeTaskSystem():
     @log("Adding user to task")
     def add_user_to_task(self, task_id, user_id):
         return self.tasks.add_user_to_task(task_id, user_id)
+
+    @log("Removing user from task")
+    def remove_user_from_task(self, task_id, user_id):
+        return self.tasks.remove_user_from_task(task_id, user_id)
