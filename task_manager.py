@@ -1,6 +1,6 @@
 from validation import validate_task
 from file_handler import load_data, save_update
-from decorators import logging as log
+from decorators import log
 class Task():
 
     @log("Creating task")
@@ -23,7 +23,6 @@ class Task():
     
     @log("Updating task field")
     def update_task_field(self, field, new_data):
-        
         try:
             self.__dict__[field] = new_data
             if validate_task(self): 
@@ -31,12 +30,27 @@ class Task():
                 save_update(self)
         except:
             print("Unexpected error")
-        
+    @log("Adding user to task")
+    def add_user(self, user_id):
+        self.users.append(user_id)
+        save_update(self)
+        print(f"User {user_id} added to the task.")
+    
+    @log("Removing user from task")
+    def remove_user(self, user_id):
+        self.users.remove(user_id)
+        save_update(self)
+        print(f"User {user_id} removed from the task.")
+    @log("collecting users in task")
+    def show_users(self):
+        return self.users
+
     def __str__(self):
         return f"Task {self.id}: {self.name}"
     
 
 class TaskManager():
+
     @log("Adding task")
     def add_task(self, new_task):
         tasks = load_data("tasks.json")
