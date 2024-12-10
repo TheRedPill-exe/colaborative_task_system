@@ -1,6 +1,6 @@
-from validation import validate
+from validation import validate_user as validate
 from file_handler import load_data, save_update
-from logging import log
+from decorators import log
 
 class User():
 
@@ -13,8 +13,7 @@ class User():
         self.tasks = TaskParent.get_user_tasks(id)
         self.projects = ProjectParent.get_user_projects(id)
     
-    @log("Updating user field")
-
+    @log("Updating user data")
     def update_user_field(self, field, data, new_data):
         
         users = load_data("users.json")
@@ -36,6 +35,13 @@ class User():
 
 class UserManager():
 
+    def __init__(self):
+        self.users = load_data("users.json")
+
+    @log("Collecting all users data")
+    def get_all(self):
+        return self.users  # Devuelve la lista de usuarios
+    
     @log("Adding user")
     def add_user(self, new_user):
         users = load_data("users.json")
@@ -72,5 +78,3 @@ class UserManager():
         else:
             print("User not found.")
 
-user = UserManager()
-user.add_user({"id": "2", "name": "John", "email": "afs@gmail.com", "birth_date": "1990-01-01", "password": "1234"})

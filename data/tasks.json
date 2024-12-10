@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "name": "Design Landing Page",
+        "description": "Create a responsive design for the homepage of the website.",
+        "status": "Pending",
+        "priority": "High",
+        "deadline": "2024-12-15",
+        "assigned_users": ["1", "2"]
+    },
+    {
+        "id": "2",
+        "name": "Database Optimization",
+        "description": "Analyze and optimize database queries for better performance.",
+        "status": "In Progress",
+        "priority": "Medium",
+        "deadline": "2024-12-20",
+        "assigned_users": ["3"]
+    },
+    {
+        "id": "3",
+        "name": "Unit Testing",
+        "description": "Write and execute unit tests for the API endpoints.",
+        "status": "Pending",
+        "priority": "Low",
+        "deadline": "2024-12-25",
+        "assigned_users": []
+    }
+]

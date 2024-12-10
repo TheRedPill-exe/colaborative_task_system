@@ -52,7 +52,9 @@ class Task():
     
 
 class TaskManager():
-
+    def __init__(self):
+        self.tasks = load_data("tasks.json")
+        
     @log("Adding task")
     def add_task(self, new_task):
         tasks = load_data("tasks.json")
@@ -63,8 +65,12 @@ class TaskManager():
             return True
         else:
             print("Task data is invalid. Task was not added.")
+    
+    @log("Getting all data")
+    def get_all(self):
+        return self.tasks  # Devuelve la lista de tareas
+    
     @log("showing tasks")
-
     def show_tasks(self):
         tasks = load_data()
         for task in tasks:
@@ -103,5 +109,3 @@ class TaskManager():
         user_tasks = [task for task in tasks if user_id in task["users"]]
         return user_tasks
 
-task = Task(1, "Task 1", "Description", "To Do", "2021-01-01", "2021-01-10", "High")
-print(task.__str__())

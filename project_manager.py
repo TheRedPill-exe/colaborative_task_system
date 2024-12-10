@@ -29,7 +29,11 @@ class Project():
         
         print("Task not found.")
         return None
-
+    
+    @log("Converting project to a set")
+    def to_set(self):
+        return {self.id, self.name, self.description, self.priority, self.tasks, self.users}
+    
     @log("Getting user from project")
     def get_user(self, user_name):
         for user in self.users:
@@ -51,6 +55,7 @@ class Project():
             self.__dict__[field] = new_data
             if validate_project(self):
                 print(f"{field} from the project {self[field]} changed to {new_data}.")
+                
                 save_update(self)
         except:
             print("Unexpected error")

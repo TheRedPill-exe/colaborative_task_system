@@ -1,33 +1,29 @@
 [
     {
         "id": "1",
-        "name": "John",
-        "email": "afs@gmail.com",
-        "birth_date": "1990-01-01"
-    },
-    {
-        "id": "1",
-        "name": "John",
-        "email": "afs@gmail.com",
-        "birth_date": "1990-01-01"
-    },
-    {
-        "id": "1",
-        "name": "John",
-        "email": "afs@gmail.com",
-        "birth_date": "1990-01-01"
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "password": "password123",
+        "birth_date": "1990-05-20",
+        "assigned_tasks": ["1"],
+        "completed_tasks": []
     },
     {
         "id": "2",
-        "name": "John",
-        "email": "afs@gmail.com",
-        "birth_date": "1990-01-01"
+        "name": "Bob Smith",
+        "email": "bob.smith@example.com",
+        "password": "securepass",
+        "birth_date": "1988-09-15",
+        "assigned_tasks": ["1"],
+        "completed_tasks": ["3"]
     },
     {
-        "id": "2",
-        "name": "John",
-        "email": "afs@gmail.com",
-        "birth_date": "1990-01-01",
-        "password": "1234"
+        "id": "3",
+        "name": "Charlie Brown",
+        "email": "charlie.brown@example.com",
+        "password": "charlie2024",
+        "birth_date": "1995-01-10",
+        "assigned_tasks": ["2"],
+        "completed_tasks": []
     }
 ]

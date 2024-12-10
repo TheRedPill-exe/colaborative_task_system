@@ -1,1 +1,20 @@
 Adding user - add_user executed with args: (<__main__.UserManager object at 0x000002A18EA2A290>, {'id': '2', 'name': 'John', 'email': 'afs@gmail.com', 'birth_date': '1990-01-01', 'password': '1234'}), and kwargs: {}
+Adding user - add_user executed with args: (<user_manager.UserManager object at 0x0000016681EF56D0>, {'id': '2', 'name': 'John', 'email': 'afs@gmail.com', 'birth_date': '1990-01-01', 'password': '1234'}), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x000001A4EF6D7FD0>, '1', 'agua', 'pues que te digo', 'Normal', [], []), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x000001790DFC9E50>, '1', '1', '1', 'Normal', [], []), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x00000162BB2D7FD0>, '1', '1', '|', 'Normal', [], []), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x000001994348F510>, '1', '1', '1', 'Normal', [], []), and kwargs: {}
+Adding project - add_project executed with args: (<project_manager.ProjectManager object at 0x00000199434EA090>, <project_manager.Project object at 0x000001994348F510>), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x000001994348F510>, '3', 'Nombre', 'Agua de panela', 'Normal', [], []), and kwargs: {}
+Adding project - add_project executed with args: (<project_manager.ProjectManager object at 0x00000199434EA090>, <project_manager.Project object at 0x000001994348F510>), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x000002A2E66FF510>, 'a', 'a', 'a', 'Normal', [], []), and kwargs: {}
+Adding project - add_project executed with args: (<project_manager.ProjectManager object at 0x000002A2E675EC10>, <project_manager.Project object at 0x000002A2E66FF510>), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x000002A2E66FF510>, '1', 'asdf', 'asdfsdf', 'Normal', [], []), and kwargs: {}
+Adding project - add_project executed with args: (<project_manager.ProjectManager object at 0x000002A2E675EC10>, <project_manager.Project object at 0x000002A2E66FF510>), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x000002A2E66FF510>, '3', 'Intento', 'Interntode crear un proyecto', 'Normal', [], []), and kwargs: {}
+Adding project - add_project executed with args: (<project_manager.ProjectManager object at 0x000002A2E675EC10>, <project_manager.Project object at 0x000002A2E66FF510>), and kwargs: {}
+Getting all data - get_all executed with args: (<task_manager.TaskManager object at 0x00000201C8222690>,), and kwargs: {}
+Getting all data - get_all executed with args: (<task_manager.TaskManager object at 0x0000024B39822690>,), and kwargs: {}
+Getting all data - get_all executed with args: (<task_manager.TaskManager object at 0x0000024387EF2690>,), and kwargs: {}
+Collecting all users data - get_all executed with args: (<user_manager.UserManager object at 0x0000024387EF3ED0>,), and kwargs: {}
+Creating project - __init__ executed with args: (<project_manager.Project object at 0x0000024387F87DD0>, '1', '1', '1', 'Normal', [{'id': '1', 'name': 'Design Landing Page', 'description': 'Create a responsive design for the homepage of the website.', 'status': 'Pending', 'priority': 'High', 'deadline': '2024-12-15', 'assigned_users': ['1', '2']}], [{'id': '1', 'name': 'Alice Johnson', 'email': 'alice.johnson@example.com', 'password': 'password123', 'birth_date': '1990-05-20', 'assigned_tasks': ['1'], 'completed_tasks': []}]), and kwargs: {}

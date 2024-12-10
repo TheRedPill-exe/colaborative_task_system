@@ -5,6 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))  # Directorio raíz del pr
 
 def load_data(data_type):
     filename = os.path.join(BASE_DIR, "colaborative_task_system\\" "data",data_type )
+    print(filename)
     """Carga los datos de usuarios desde el archivo JSON."""
     try:
         with open(filename, "r") as jusers:
